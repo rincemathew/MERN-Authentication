@@ -1,11 +1,11 @@
-
+import asyncHandler from 'express-async-handler';
 
 //@desc Auth user/set tocken
 //route POST /api/users/auth
 //@access Public
-const authUser = (req,res) => {
+const authUser = asyncHandler(async (req,res) => {
     res.status(200).json({message:'Auth User'});
-}
+});
 
 
 export {authUser};
